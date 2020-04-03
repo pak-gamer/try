@@ -8,7 +8,11 @@ bot.user.setActivity(`Say ??help`, { type: `WATCHING` });
 bot.on('message', message=>{
 if(message.auther.bot){return;}
 if(message.content=="$upvote"){
-    message.reply("This feature is not yet avilable");
+    message.reply("This feature is not yet avilable @everyone");
+}
+if(message.content=="calleveryone"){
+    message.reply.everyone("hello @everyone")
 }
 })
+
 bot.login(process.env.token);
