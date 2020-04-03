@@ -1,9 +1,9 @@
 const Discord=require('discord.js');
-const bot=new Discord.client()
+const bot=new Discord.client();
 bot.on('ready',()=>{
 console.log("bot is online");
 bot.user.setActivity(`Say ??help`, { type: `WATCHING` });
-})
+});
 
 bot.on('message', message=>{
 if(message.auther.bot){return;}
@@ -13,6 +13,6 @@ if(message.content=="$upvote"){
 if(message.content=="calleveryone"){
     message.reply.everyone("hello @everyone")
 }
-})
+});
 
 bot.login(process.env.token);
