@@ -11,4 +11,4 @@ if(message.content=="$upvote"){
     message.reply("This feature is not yet avilable");
 }
 })
-
+bot.login(process.env.token);
